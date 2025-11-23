@@ -396,8 +396,6 @@ class LoginWithOTPView(APIView):
 from twilio.rest import Client
 
 def send_sms_twilio(mobile, code):
-    # account_sid = "REMOVED"
-    # auth_token = "REMOVED"
     account_sid = os.environ.get("account_sid")
     auth_token = os.environ.get("auth_token")
     client = Client(account_sid, auth_token)
