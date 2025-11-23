@@ -9,12 +9,16 @@ import uuid
 from django.core.mail import send_mail
 from rest_framework_simplejwt.tokens import RefreshToken
 
+from dotenv import load_dotenv
+import os
+
 
 # views.py
 from rest_framework import viewsets
 from rest_framework.permissions import AllowAny, IsAdminUser
 from rest_framework.decorators import action
 
+load_dotenv()  # This loads the variables from .env
         
 # class postcustomerData(APIView):
 #     def post(self,request):
@@ -392,8 +396,10 @@ class LoginWithOTPView(APIView):
 from twilio.rest import Client
 
 def send_sms_twilio(mobile, code):
-    account_sid = "REMOVED"
-    auth_token = "REMOVED"
+    # account_sid = "REMOVED"
+    # auth_token = "REMOVED"
+    account_sid = os.environ.get("account_sid")
+    auth_token = os.environ.get("auth_token")
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
