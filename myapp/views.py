@@ -371,33 +371,12 @@ class LoginWithOTPView(APIView):
             "user": StudentSerializer(user).data
         }, status=status.HTTP_200_OK)
         
-        
-# import requests
-
-# def send_sms_fast2sms(mobile, code):
-#     api_key = "ANEGKlmz9ZM1SHbgBjTRFeDc5tkwVLos2n0p74U6Whq8vyiPur7VTgvPuymkIlMpiLYQXWR9q2KO4jB8"  # 🔒 keep this secret, use environment variable in production
-#     message = f"Your verification OTP is {code}. It will expire in 5 minutes."
-#     url = "https://www.fast2sms.com/dev/bulkV2"
-#     payload = {
-#         "authorization": api_key,
-#         "sender_id": "TXTIND",
-#         "message": message,
-#         "language": "english",
-#         "route": "v3",
-#         "numbers": mobile,
-#     }
-#     headers = {
-#         'cache-control': "no-cache"
-#     }
-#     response = requests.get(url, params=payload, headers=headers)
-#     print(response.text)  # for debugging
-
 
 from twilio.rest import Client
 
 def send_sms_twilio(mobile, code):
-    account_sid = os.environ.get("account_sid")
-    auth_token = os.environ.get("auth_token")
+    account_sid = os.environ.get("TWILIO_ACCOUNT_SID")
+    auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
