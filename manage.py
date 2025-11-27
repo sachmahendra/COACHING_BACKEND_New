@@ -2,9 +2,15 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from pathlib import Path
+from dotenv import load_dotenv  # 🔹 add this
 
 
 def main():
+    BASE_DIR = Path(__file__).resolve().parent
+    # 🔹 Load .env BEFORE Django reads settings
+    load_dotenv(BASE_DIR / ".env")
+    
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')
     try:

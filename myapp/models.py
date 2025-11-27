@@ -191,14 +191,40 @@ class Student(AbstractBaseUser, PermissionsMixin):
         return f"{self.mobile_number} - {self.full_name or 'NoName'}"
 
 
-# ---------------- OTP MODEL ----------------
+# # ---------------- OTP MODEL for twilio ----------------
+# class OTPRequest(models.Model):
+#     """
+#     Stores OTPs issued for a mobile number. Single-use, short TTL.
+#     """
+#     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+#     mobile_number = models.CharField(max_length=15, db_index=True)
+#     code = models.CharField(max_length=6)  # 6-digit OTP
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     verified = models.BooleanField(default=False)
+#     used = models.BooleanField(default=False)  # mark OTP used after signup/login
+
+#     class Meta:
+#         indexes = [
+#             models.Index(fields=["mobile_number"]),
+#         ]
+#         db_table = "OTPRequest"  # (optional) you can rename if you want a custom table name
+
+#     def is_expired(self, minutes=5):
+#         return timezone.now() > self.created_at + timezone.timedelta(minutes=minutes)
+
+#     def __str__(self):
+#         return f"{self.mobile_number} - {self.code} - verified:{self.verified}"
+
+    
+    
 class OTPRequest(models.Model):
     """
     Stores OTPs issued for a mobile number. Single-use, short TTL.
     """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     mobile_number = models.CharField(max_length=15, db_index=True)
-    code = models.CharField(max_length=6)  # 6-digit OTP
+    code = models.CharField(max_length=6, blank=True, null=True)  # now optional
+    session_id = models.CharField(max_length=64, blank=True, null=True)  # NEW
     created_at = models.DateTimeField(auto_now_add=True)
     verified = models.BooleanField(default=False)
     used = models.BooleanField(default=False)  # mark OTP used after signup/login
@@ -207,12 +233,10 @@ class OTPRequest(models.Model):
         indexes = [
             models.Index(fields=["mobile_number"]),
         ]
-        db_table = "OTPRequest"  # (optional) you can rename if you want a custom table name
+        db_table = "OTPRequest"
 
     def is_expired(self, minutes=5):
         return timezone.now() > self.created_at + timezone.timedelta(minutes=minutes)
 
     def __str__(self):
-        return f"{self.mobile_number} - {self.code} - verified:{self.verified}"
-
-    
+        return f"{self.mobile_number} - verified:{self.verified}"

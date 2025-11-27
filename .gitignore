@@ -6,7 +6,7 @@ __pycache__/
 
 # Virtual environment
 venv/
-
+secrets.txt
 # Environment files
 .env
 *.env

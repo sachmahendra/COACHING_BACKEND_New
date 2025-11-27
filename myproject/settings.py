@@ -32,6 +32,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-secret-for-local')
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost 127.0.0.1').split()
 
+TWOFACTOR_API_KEY = os.environ.get("TWOFACTOR_API_KEY", "")
+
+
 
 # Application definition
 

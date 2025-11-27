@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -8,29 +9,13 @@ import ast
 import uuid
 from django.core.mail import send_mail
 from rest_framework_simplejwt.tokens import RefreshToken
-
-from dotenv import load_dotenv
 import os
-
-
-# views.py
-from rest_framework import viewsets
+import requests
+from django.conf import settings
 from rest_framework.permissions import AllowAny, IsAdminUser
 from rest_framework.decorators import action
 
-load_dotenv()  # This loads the variables from .env
-        
-# class postcustomerData(APIView):
-#     def post(self,request):
-#         serializerdata = postcustomerDataSerializer(data=request.data)
-#         if serializerdata.is_valid():
-#             #orm to create new record in db
-#             customer.objects.create(**serializerdata.data)
-#             message = {'message':"Customer Data Submitted Sucessfully"}
-#             return Response(message,status=status.HTTP_201_CREATED)
-#         return Response(serializerdata.errors, status=status.HTTP_400_BAD_REQUEST)
-    
-    
+
 class postcustomerData(APIView):
     def post(self, request):
         serializerdata = postcustomerDataSerializer(data=request.data)
@@ -174,52 +159,6 @@ class DownloadDocumentViewSet(viewsets.ModelViewSet):
 # http://127.0.0.1:8000/download-documents/?subject=physics&doc_type=chapter
 # → Returns physics documents of type "chapter"
 
-# -------------------------------------------------------------------------------------------------------
-
-# from rest_framework import generics, status
-# from rest_framework.response import Response
-# from rest_framework_simplejwt.tokens import RefreshToken
-# from django.contrib.auth import authenticate
-# from .models import Student
-# from .serializers import StudentSignupSerializer, StudentLoginSerializer
-
-# # ---------------- SIGNUP -----------------
-# class StudentSignupView(generics.CreateAPIView):
-#     serializer_class = StudentSignupSerializer
-
-#     def post(self, request, *args, **kwargs):
-#         serializer = self.get_serializer(data=request.data)
-#         if not serializer.is_valid():
-#             print(serializer.errors)  # 👈 Add this line
-#             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-#         user = serializer.save()
-#         return Response({"message": "User created successfully!"}, status=status.HTTP_201_CREATED)
-
-
-# # ---------------- LOGIN -----------------
-# class StudentLoginView(generics.GenericAPIView):
-#     serializer_class = StudentLoginSerializer
-
-#     def post(self, request, *args, **kwargs):
-#         serializer = self.get_serializer(data=request.data)
-#         serializer.is_valid(raise_exception=True)
-
-#         email = serializer.validated_data["email"]
-#         password = serializer.validated_data["password"]
-
-#         user = authenticate(request, email=email, password=password)
-#         if user is not None:
-#             refresh = RefreshToken.for_user(user)
-#             return Response({
-#                 "access": str(refresh.access_token),
-#                 "refresh": str(refresh),
-#                 "user": {
-#                     "email": user.email,
-#                     "full_name": user.full_name
-#                 }
-#             })
-#         return Response({"error": "Invalid email or password"}, status=status.HTTP_401_UNAUTHORIZED)
-
 
 
 # myapp/views.py
@@ -250,9 +189,32 @@ def generate_otp():
 #     # In dev we just print. Replace with SMS provider in production (Twilio, Fast2SMS, etc.)
 #     print(f"[OTP SEND] to {mobile}: {code}")
     
-def send_sms_twilio(mobile, code):
-    # In dev we just print. Replace with SMS provider in production (Twilio, Fast2SMS, etc.)
-    print(f"[OTP SEND] to {mobile}: {code}")
+# def send_sms_twilio(mobile, code):
+#     # In dev we just print. Replace with SMS provider in production (Twilio, Fast2SMS, etc.)
+#     print(f"[OTP SEND] to {mobile}: {code}")
+
+# class SendOTPView(APIView):
+#     permission_classes = [permissions.AllowAny]
+
+#     def post(self, request):
+#         serializer = SendOTPSerializer(data=request.data)
+#         serializer.is_valid(raise_exception=True)
+#         mobile = serializer.validated_data["mobile_number"]
+#         # rate-limit: optional — you can check recent OTPs and prevent spamming
+#         code = generate_otp()
+#         otp_obj = OTPRequest.objects.create(mobile_number=mobile, code=code)
+#         # send via SMS provider (here placeholder)
+        
+#         # send via SMS provider (here placeholder)
+        
+#         # send_sms_placeholder(mobile, code) #for sending otp in terminal
+
+#         # send_sms_fast2sms(mobile, code)
+#         send_sms_twilio(mobile, code)
+#         return Response({"message": "OTP sent"}, 
+                        
+                        
+#                         status=status.HTTP_200_OK)
 
 class SendOTPView(APIView):
     permission_classes = [permissions.AllowAny]
@@ -261,21 +223,45 @@ class SendOTPView(APIView):
         serializer = SendOTPSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         mobile = serializer.validated_data["mobile_number"]
-        # rate-limit: optional — you can check recent OTPs and prevent spamming
-        code = generate_otp()
-        otp_obj = OTPRequest.objects.create(mobile_number=mobile, code=code)
-        # send via SMS provider (here placeholder)
-        
-        # send via SMS provider (here placeholder)
-        
-        # send_sms_placeholder(mobile, code) #for sending otp in terminal
 
-        # send_sms_fast2sms(mobile, code)
-        send_sms_twilio(mobile, code)
-        return Response({"message": "OTP sent"}, 
-                        
-                        
-                        status=status.HTTP_200_OK)
+        try:
+            session_id = send_otp_2factor(mobile)
+        except Exception as e:
+            return Response({"error": f"Failed to send OTP: {e}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        OTPRequest.objects.create(
+            mobile_number=mobile,
+            session_id=session_id,
+            # code left blank; 2Factor stores it
+        )
+
+        return Response({"message": "OTP sent"}, status=status.HTTP_200_OK)
+
+
+# class VerifyOTPView(APIView):
+#     permission_classes = [permissions.AllowAny]
+
+#     def post(self, request):
+#         serializer = VerifyOTPSerializer(data=request.data)
+#         serializer.is_valid(raise_exception=True)
+#         mobile = serializer.validated_data["mobile_number"]
+#         code = serializer.validated_data["code"]
+#         # find latest un-used OTP for mobile
+#         try:
+#             otp = OTPRequest.objects.filter(mobile_number=mobile, used=False).order_by("-created_at").first()
+#             if not otp:
+#                 return Response({"error": "No OTP found for this number"}, status=status.HTTP_400_BAD_REQUEST)
+#             if otp.code != code:
+#                 return Response({"error": "Invalid OTP"}, status=status.HTTP_400_BAD_REQUEST)
+#             if otp.is_expired(OTP_TTL_MINUTES):
+#                 return Response({"error": "OTP expired"}, status=status.HTTP_400_BAD_REQUEST)
+#             # mark verified but not used yet — used will be set when completing signup or login
+#             otp.verified = True
+#             otp.save()
+#             return Response({"verified": True}, status=status.HTTP_200_OK)
+#         except Exception as e:
+#             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
 
 class VerifyOTPView(APIView):
     permission_classes = [permissions.AllowAny]
@@ -285,21 +271,31 @@ class VerifyOTPView(APIView):
         serializer.is_valid(raise_exception=True)
         mobile = serializer.validated_data["mobile_number"]
         code = serializer.validated_data["code"]
-        # find latest un-used OTP for mobile
+
+        otp = OTPRequest.objects.filter(mobile_number=mobile, used=False).order_by("-created_at").first()
+        if not otp:
+            return Response({"error": "No OTP found for this number"}, status=status.HTTP_400_BAD_REQUEST)
+
+        if otp.is_expired(OTP_TTL_MINUTES):
+            return Response({"error": "OTP expired"}, status=status.HTTP_400_BAD_REQUEST)
+
+        if not otp.session_id:
+            return Response({"error": "OTP session missing"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # verify with 2Factor
         try:
-            otp = OTPRequest.objects.filter(mobile_number=mobile, used=False).order_by("-created_at").first()
-            if not otp:
-                return Response({"error": "No OTP found for this number"}, status=status.HTTP_400_BAD_REQUEST)
-            if otp.code != code:
-                return Response({"error": "Invalid OTP"}, status=status.HTTP_400_BAD_REQUEST)
-            if otp.is_expired(OTP_TTL_MINUTES):
-                return Response({"error": "OTP expired"}, status=status.HTTP_400_BAD_REQUEST)
-            # mark verified but not used yet — used will be set when completing signup or login
-            otp.verified = True
-            otp.save()
-            return Response({"verified": True}, status=status.HTTP_200_OK)
+            ok = verify_otp_2factor(otp.session_id, code)
         except Exception as e:
-            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"error": f"Verification failed: {e}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        if not ok:
+            return Response({"error": "Invalid OTP"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # ✅ OTP verified
+        otp.verified = True
+        otp.save()
+        return Response({"verified": True}, status=status.HTTP_200_OK)
+
 
 class CompleteSignupView(APIView):
     permission_classes = [permissions.AllowAny]
@@ -338,11 +334,45 @@ class CompleteSignupView(APIView):
         }
         return Response(data, status=status.HTTP_201_CREATED)
 
+# class LoginWithOTPView(APIView):
+#     permission_classes = [permissions.AllowAny]
+
+#     def post(self, request):
+#         # This endpoint expects mobile_number and requires that an OTP was verified for this mobile (verified=True, used=False)
+#         serializer = VerifyOTPSerializer(data=request.data)
+#         serializer.is_valid(raise_exception=True)
+#         mobile = serializer.validated_data["mobile_number"]
+#         code = serializer.validated_data["code"]
+
+#         otp = OTPRequest.objects.filter(mobile_number=mobile, used=False).order_by("-created_at").first()
+#         if not otp:
+#             return Response({"error": "No OTP found"}, status=status.HTTP_400_BAD_REQUEST)
+#         if otp.code != code:
+#             return Response({"error": "Invalid OTP"}, status=status.HTTP_400_BAD_REQUEST)
+#         if otp.is_expired(OTP_TTL_MINUTES):
+#             return Response({"error": "OTP expired"}, status=status.HTTP_400_BAD_REQUEST)
+#         # find user
+#         try:
+#             user = Student.objects.get(mobile_number=mobile)
+#         except Student.DoesNotExist:
+#             return Response({"error": "User not found. Please signup first."}, status=status.HTTP_400_BAD_REQUEST)
+#         # mark otp used
+#         otp.used = True
+#         otp.save()
+#         # issue tokens
+#         refresh = RefreshToken.for_user(user)
+#         return Response({
+#             "refresh": str(refresh),
+#             "access": str(refresh.access_token),
+#             "user": StudentSerializer(user).data
+#         }, status=status.HTTP_200_OK)
+
+
+
 class LoginWithOTPView(APIView):
     permission_classes = [permissions.AllowAny]
 
     def post(self, request):
-        # This endpoint expects mobile_number and requires that an OTP was verified for this mobile (verified=True, used=False)
         serializer = VerifyOTPSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         mobile = serializer.validated_data["mobile_number"]
@@ -351,18 +381,31 @@ class LoginWithOTPView(APIView):
         otp = OTPRequest.objects.filter(mobile_number=mobile, used=False).order_by("-created_at").first()
         if not otp:
             return Response({"error": "No OTP found"}, status=status.HTTP_400_BAD_REQUEST)
-        if otp.code != code:
-            return Response({"error": "Invalid OTP"}, status=status.HTTP_400_BAD_REQUEST)
         if otp.is_expired(OTP_TTL_MINUTES):
             return Response({"error": "OTP expired"}, status=status.HTTP_400_BAD_REQUEST)
+        if not otp.session_id:
+            return Response({"error": "OTP session missing"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # verify with 2Factor again for login
+        try:
+            ok = verify_otp_2factor(otp.session_id, code)
+        except Exception as e:
+            return Response({"error": f"Verification failed: {e}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        if not ok:
+            return Response({"error": "Invalid OTP"}, status=status.HTTP_400_BAD_REQUEST)
+
         # find user
         try:
             user = Student.objects.get(mobile_number=mobile)
         except Student.DoesNotExist:
             return Response({"error": "User not found. Please signup first."}, status=status.HTTP_400_BAD_REQUEST)
+
         # mark otp used
         otp.used = True
+        otp.verified = True
         otp.save()
+
         # issue tokens
         refresh = RefreshToken.for_user(user)
         return Response({
@@ -370,19 +413,63 @@ class LoginWithOTPView(APIView):
             "access": str(refresh.access_token),
             "user": StudentSerializer(user).data
         }, status=status.HTTP_200_OK)
+
         
 
-from twilio.rest import Client
+# from twilio.rest import Client
 
-def send_sms_twilio(mobile, code):
-    account_sid = os.environ.get("TWILIO_ACCOUNT_SID")
-    auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
-    client = Client(account_sid, auth_token)
+# def send_sms_twilio(mobile, code):
+#     account_sid = os.environ.get("TWILIO_ACCOUNT_SID")
+#     auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
+#     client = Client(account_sid, auth_token)
 
-    message = client.messages.create(
-        body=f"Your verification OTP is {code}",
-        from_="+19789638428",  # your Twilio number
-        to=f"+91{mobile}"
-    )
-    print(message.sid)
+#     message = client.messages.create(
+#         body=f"Your verification OTP is {code}",
+#         from_="+19789638428",  # your Twilio number
+#         to=f"+91{mobile}"
+#     )
+#     print(message.sid)
 
+
+
+OTP_TTL_MINUTES = 5  # already present above, keep it
+
+def send_otp_2factor(mobile_number: str) -> str:
+    """
+    Call 2Factor AUTOGEN SMS endpoint.
+    Returns session_id if SMS sent successfully.
+    """
+    api_key = settings.TWOFACTOR_API_KEY
+    if not api_key:
+        raise RuntimeError("TWOFACTOR_API_KEY not configured")
+
+    # Option A: default OTP template (no name)
+    url = f"https://2factor.in/API/V1/{api_key}/SMS/+91{mobile_number}/AUTOGEN"
+
+    # Option B: use specific template OTP1 if you set it up in 2Factor
+    # url = f"https://2factor.in/API/V1/{api_key}/SMS/+91{mobile_number}/AUTOGEN/OTP1"
+
+    print("2FACTOR URL:", url)  # debug
+
+    resp = requests.get(url, timeout=10)
+    data = resp.json()
+
+    if data.get("Status") != "Success":
+        raise RuntimeError(data.get("Details", "Failed to send OTP"))
+
+    return data["Details"]  # session_id
+
+def verify_otp_2factor(session_id: str, code: str) -> bool:
+    """
+    Call 2Factor VERIFY endpoint.
+    Returns True if OTP matches.
+    """
+    api_key = settings.TWOFACTOR_API_KEY
+    if not api_key:
+        raise RuntimeError("TWOFACTOR_API_KEY not configured")
+
+    url = f"https://2factor.in/API/V1/{api_key}/SMS/VERIFY/{session_id}/{code}"
+    resp = requests.get(url, timeout=10)
+    data = resp.json()
+    # Success example: {"Status":"Success","Details":"OTP Matched"}
+    return data.get("Status") == "Success" and "OTP Matched" in data.get("Details", "")
