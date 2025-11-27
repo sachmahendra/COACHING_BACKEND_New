@@ -1,1 +1,1 @@
-web: gunicorn DJANGO_PROJECTS.wsgi --workers 3 --bind 0.0.0.0:$PORT
+web: gunicorn myproject.wsgi:application --workers 3 --bind 0.0.0.0:$PORT
