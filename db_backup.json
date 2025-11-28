@@ -1,1270 +1,858 @@
 [
 {
-  "model": "admin.logentry",
-  "pk": 1,
-  "fields": {
-    "action_time": "2025-09-13T12:08:20.553Z",
-    "user": 1,
-    "content_type": 7,
-    "object_id": "ae591481-9251-4cdb-9c7c-8a2ac66493b5",
-    "object_repr": "mahendra",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 2,
-  "fields": {
-    "action_time": "2025-09-18T17:21:47.499Z",
-    "user": 1,
-    "content_type": 7,
-    "object_id": "b7ff523f-f2c9-40a9-a190-4cd2e2313384",
-    "object_repr": "ankur",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 3,
-  "fields": {
-    "action_time": "2025-09-18T18:28:07.290Z",
-    "user": 1,
-    "content_type": 10,
-    "object_id": "706afc21-bda6-46e4-9a01-f99b6ebda519",
-    "object_repr": "IIT-JEE",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 4,
-  "fields": {
-    "action_time": "2025-09-18T18:28:24.390Z",
-    "user": 1,
-    "content_type": 10,
-    "object_id": "884fa640-54b7-411b-887f-6d3f86da9cb7",
-    "object_repr": "NEET",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 5,
-  "fields": {
-    "action_time": "2025-09-18T18:28:53.217Z",
-    "user": 1,
-    "content_type": 10,
-    "object_id": "da56ad88-4263-41cd-b231-cf1983840af8",
-    "object_repr": "Olympiad",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 6,
-  "fields": {
-    "action_time": "2025-09-21T10:40:21.766Z",
-    "user": 1,
-    "content_type": 11,
-    "object_id": "2e1c9ea9-a773-458d-801e-1cc7dec6c757",
-    "object_repr": "Plus Two Tuition WITH NEET COACHING",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 7,
-  "fields": {
-    "action_time": "2025-09-21T11:42:32.169Z",
-    "user": 1,
-    "content_type": 11,
-    "object_id": "198d5fec-7e33-4eaa-9897-972029c61bc8",
-    "object_repr": "NEET REPEATER PRPOGRAM",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 8,
-  "fields": {
-    "action_time": "2025-09-30T17:55:39.219Z",
-    "user": 2,
-    "content_type": 13,
-    "object_id": "440247df-5f88-463d-bbeb-441165c6e3b0",
-    "object_repr": "JEE Physics1 (JEE MAINS)",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 9,
-  "fields": {
-    "action_time": "2025-09-30T17:55:39.219Z",
-    "user": 2,
-    "content_type": 13,
-    "object_id": "ec73a042-86e3-48c9-b729-c909e35db2bd",
-    "object_repr": "JEE Physics1 (JEE MAINS)",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 10,
-  "fields": {
-    "action_time": "2025-09-30T17:55:39.219Z",
-    "user": 2,
-    "content_type": 13,
-    "object_id": "09a72320-41f2-46c5-9fc2-a831039758e9",
-    "object_repr": "JEE Physics (JEE MAINS)",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 11,
-  "fields": {
-    "action_time": "2025-09-30T17:55:39.219Z",
-    "user": 2,
-    "content_type": 13,
-    "object_id": "bcbb8971-bb15-43e6-b634-0fa37bea473a",
-    "object_repr": "JEE Physics (JEE MAINS)",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 12,
-  "fields": {
-    "action_time": "2025-09-30T17:59:20.183Z",
-    "user": 2,
-    "content_type": 13,
-    "object_id": "0eafa316-0076-4533-89a7-5017567b26da",
-    "object_repr": "Mathematics in Physics (Class 11 with JEE Coaching)",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 1,
-  "fields": {
-    "name": "Can add log entry",
-    "content_type": 1,
-    "codename": "add_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 2,
-  "fields": {
-    "name": "Can change log entry",
-    "content_type": 1,
-    "codename": "change_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 3,
-  "fields": {
-    "name": "Can delete log entry",
-    "content_type": 1,
-    "codename": "delete_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 4,
-  "fields": {
-    "name": "Can view log entry",
-    "content_type": 1,
-    "codename": "view_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 5,
-  "fields": {
-    "name": "Can add permission",
-    "content_type": 2,
-    "codename": "add_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 6,
-  "fields": {
-    "name": "Can change permission",
-    "content_type": 2,
-    "codename": "change_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 7,
-  "fields": {
-    "name": "Can delete permission",
-    "content_type": 2,
-    "codename": "delete_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 8,
-  "fields": {
-    "name": "Can view permission",
-    "content_type": 2,
-    "codename": "view_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 9,
-  "fields": {
-    "name": "Can add group",
-    "content_type": 3,
-    "codename": "add_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 10,
-  "fields": {
-    "name": "Can change group",
-    "content_type": 3,
-    "codename": "change_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 11,
-  "fields": {
-    "name": "Can delete group",
-    "content_type": 3,
-    "codename": "delete_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 12,
-  "fields": {
-    "name": "Can view group",
-    "content_type": 3,
-    "codename": "view_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 13,
-  "fields": {
-    "name": "Can add user",
-    "content_type": 4,
-    "codename": "add_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 14,
-  "fields": {
-    "name": "Can change user",
-    "content_type": 4,
-    "codename": "change_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 15,
-  "fields": {
-    "name": "Can delete user",
-    "content_type": 4,
-    "codename": "delete_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 16,
-  "fields": {
-    "name": "Can view user",
-    "content_type": 4,
-    "codename": "view_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 17,
-  "fields": {
-    "name": "Can add content type",
-    "content_type": 5,
-    "codename": "add_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 18,
-  "fields": {
-    "name": "Can change content type",
-    "content_type": 5,
-    "codename": "change_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 19,
-  "fields": {
-    "name": "Can delete content type",
-    "content_type": 5,
-    "codename": "delete_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 20,
-  "fields": {
-    "name": "Can view content type",
-    "content_type": 5,
-    "codename": "view_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 21,
-  "fields": {
-    "name": "Can add session",
-    "content_type": 6,
-    "codename": "add_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 22,
-  "fields": {
-    "name": "Can change session",
-    "content_type": 6,
-    "codename": "change_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 23,
-  "fields": {
-    "name": "Can delete session",
-    "content_type": 6,
-    "codename": "delete_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 24,
-  "fields": {
-    "name": "Can view session",
-    "content_type": 6,
-    "codename": "view_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 25,
-  "fields": {
-    "name": "Can add customer",
-    "content_type": 7,
-    "codename": "add_customer"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 26,
-  "fields": {
-    "name": "Can change customer",
-    "content_type": 7,
-    "codename": "change_customer"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 27,
-  "fields": {
-    "name": "Can delete customer",
-    "content_type": 7,
-    "codename": "delete_customer"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 28,
-  "fields": {
-    "name": "Can view customer",
-    "content_type": 7,
-    "codename": "view_customer"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 29,
-  "fields": {
-    "name": "Can add sensor",
-    "content_type": 8,
-    "codename": "add_sensor"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 30,
-  "fields": {
-    "name": "Can change sensor",
-    "content_type": 8,
-    "codename": "change_sensor"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 31,
-  "fields": {
-    "name": "Can delete sensor",
-    "content_type": 8,
-    "codename": "delete_sensor"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 32,
-  "fields": {
-    "name": "Can view sensor",
-    "content_type": 8,
-    "codename": "view_sensor"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 33,
-  "fields": {
-    "name": "Can add notification",
-    "content_type": 9,
-    "codename": "add_notification"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 34,
-  "fields": {
-    "name": "Can change notification",
-    "content_type": 9,
-    "codename": "change_notification"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 35,
-  "fields": {
-    "name": "Can delete notification",
-    "content_type": 9,
-    "codename": "delete_notification"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 36,
-  "fields": {
-    "name": "Can view notification",
-    "content_type": 9,
-    "codename": "view_notification"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 37,
-  "fields": {
-    "name": "Can add category",
-    "content_type": 10,
-    "codename": "add_category"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 38,
-  "fields": {
-    "name": "Can change category",
-    "content_type": 10,
-    "codename": "change_category"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 39,
-  "fields": {
-    "name": "Can delete category",
-    "content_type": 10,
-    "codename": "delete_category"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 40,
-  "fields": {
-    "name": "Can view category",
-    "content_type": 10,
-    "codename": "view_category"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 41,
-  "fields": {
-    "name": "Can add course",
-    "content_type": 11,
-    "codename": "add_course"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 42,
-  "fields": {
-    "name": "Can change course",
-    "content_type": 11,
-    "codename": "change_course"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 43,
-  "fields": {
-    "name": "Can delete course",
-    "content_type": 11,
-    "codename": "delete_course"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 44,
-  "fields": {
-    "name": "Can view course",
-    "content_type": 11,
-    "codename": "view_course"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 45,
-  "fields": {
-    "name": "Can add download category",
-    "content_type": 12,
-    "codename": "add_downloadcategory"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 46,
-  "fields": {
-    "name": "Can change download category",
-    "content_type": 12,
-    "codename": "change_downloadcategory"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 47,
-  "fields": {
-    "name": "Can delete download category",
-    "content_type": 12,
-    "codename": "delete_downloadcategory"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 48,
-  "fields": {
-    "name": "Can view download category",
-    "content_type": 12,
-    "codename": "view_downloadcategory"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 49,
-  "fields": {
-    "name": "Can add download document",
-    "content_type": 13,
-    "codename": "add_downloaddocument"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 50,
-  "fields": {
-    "name": "Can change download document",
-    "content_type": 13,
-    "codename": "change_downloaddocument"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 51,
-  "fields": {
-    "name": "Can delete download document",
-    "content_type": 13,
-    "codename": "delete_downloaddocument"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 52,
-  "fields": {
-    "name": "Can view download document",
-    "content_type": 13,
-    "codename": "view_downloaddocument"
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 1,
-  "fields": {
-    "password": "pbkdf2_sha256$1000000$PNYyFf0Ar2XAc66r1IGJpA$5U6KNin6KvncHYMJYc7jY7UePA3TcDZT+pF3vM51hfs=",
-    "last_login": "2025-09-27T12:20:56.057Z",
-    "is_superuser": true,
-    "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2025-09-13T12:04:58.444Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 2,
-  "fields": {
-    "password": "pbkdf2_sha256$1000000$uDQksMPoeeqFAzCkNBiUgd$DKfQdTopRd6pWm1+p9guhaM7zU3695KRc8B/oREXrbQ=",
-    "last_login": "2025-09-27T15:40:37.978Z",
-    "is_superuser": true,
-    "username": "admin1",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2025-09-27T15:40:02.077Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 1,
-  "fields": {
-    "app_label": "admin",
-    "model": "logentry"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 2,
-  "fields": {
-    "app_label": "auth",
-    "model": "permission"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 3,
-  "fields": {
-    "app_label": "auth",
-    "model": "group"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 4,
-  "fields": {
-    "app_label": "auth",
-    "model": "user"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 5,
-  "fields": {
-    "app_label": "contenttypes",
-    "model": "contenttype"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 6,
-  "fields": {
-    "app_label": "sessions",
-    "model": "session"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 7,
-  "fields": {
-    "app_label": "myapp",
-    "model": "customer"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 8,
-  "fields": {
-    "app_label": "myapp",
-    "model": "sensor"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 9,
-  "fields": {
-    "app_label": "myapp",
-    "model": "notification"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 10,
-  "fields": {
-    "app_label": "myapp",
-    "model": "category"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 11,
-  "fields": {
-    "app_label": "myapp",
-    "model": "course"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 12,
-  "fields": {
-    "app_label": "myapp",
-    "model": "downloadcategory"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 13,
-  "fields": {
-    "app_label": "myapp",
-    "model": "downloaddocument"
+  "model": "sessions.session",
+  "pk": "375dk3t87etfnzbl8hqyod8cq1jzn8b0",
+  "fields": {
+    "session_data": ".eJxVzDsOwjAQRdG9uCaWfxnblPSsIZrxjEkAJVI-FWLvECkF1O-e91IdbmvfbYvM3cDqrKqUEthQA4ViE4BKk2yMjXDKzqdsIYM6_TLC8pBxt3zH8TbpMo3rPJDeE32si75OLM_L0f4d9Lj0X93aiEhsBZy4xC5XQgEJIILQhsoVIPiMprYmWOMzkQ9RyNgco3Gs3h8t00FX:1vGZxr:0kdSCdW0oMKQYN-vjvBN1xZjSMd0K-K-KrieLz9ZGAY",
+    "expire_date": "2025-11-19T09:38:03.403Z"
   }
 },
 {
   "model": "sessions.session",
-  "pk": "uep54ovvtkj4gbcuqbs332rpn4ht26fn",
+  "pk": "7jlrd5mrocxqlqwyjchc7t7akpv95buf",
   "fields": {
-    "session_data": ".eJxVjEsOAiEQBe_C2hD-rS7dewbSDY2MGkjmszLeXUlmodtXVe8lIm5rjdvCc5yyOAsjDr8bYXpwGyDfsd26TL2t80RyKHKni7z2zM_L7v4dVFzqqDNwUKCBbC5JuWMhY08I1jtNbAKR8gqTLqlonwByYEeKv3pgdOjE-wP0RTh-:1v2X2L:p3aXfMqx1noebMMSeVnp-s9ZA_Ng-St4K9RCnAU2h1g",
-    "expire_date": "2025-10-11T15:40:37.998Z"
+    "session_data": ".eJxVzDsOwjAQhOG7uMZW7Ow6NiU9Z4g2Y5sEUCLlUSHuDpFSQD3_Ny_Vyrb27bbkuR2SOivhWNVcBe1iLJo8ZR3QQYdUOob4gArq9Ms6wSOPu013GW-TwTSu89CZPTHHupjrlPLzcrR_B70s_Ve7yKDiKusLYhMazrFmJKopEGdK1iMggaJ4H2xhadg6bylCqABQ7w_z9UEL:1v5kwy:pmOI5adNBMkVni9h6pCYToZKOIfNXfNCt7naERqU4LM",
+    "expire_date": "2025-10-20T13:08:24.366Z"
   }
 },
 {
   "model": "sessions.session",
-  "pk": "vdvwpr2l797arhb8z9lxkxv2y80j8h7r",
+  "pk": "m3ybt6pdo4826l92exkaj88u2uwfszex",
   "fields": {
-    "session_data": ".eJxVjEEOgjAURO_StWn8v6X9demeM5ChLYIamlBYGe-uJCx0O--9eakO2zp2W81LNyV1UaROv1uP-MjzDtId863oWOZ1mXq9K_qgVbcl5ef1cP8ORtTxW8vAEeEcCHBghyFYn1wQdmyFJBryhtiE5CNgPTcCGTJZFyKkoaTeH8psNyI:1v0H6b:J7a524ks3E2jEcUiZHj9VCiXWVoRp-0W-OsUbuW-nKI",
-    "expire_date": "2025-10-05T10:15:41.359Z"
+    "session_data": ".eJxVjjkOwjAQRe_imljeJh5T0nOGaDz2EBYlUpYKcXcSKQXU_72n_1YdrUvfrXOduntRZwUx-QBsG-TWNEGAmmyjNGJY2PpgxDt1-tUy8bMOu1seNNxGzeOwTPesd0Qf66yvY6mvy8H-BXqa-81OlQEcMFJbKwQv1AabWZIzZAGhIKNzRrZPjjCASDLIEVkgRsNZfb7N0kD1:1vE8P0:f8z9R5tvOba7JrFw9xHRe_5RA-FGyCEan7dhzmXpVbQ",
+    "expire_date": "2025-11-12T15:47:58.418Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "sdua7qmf57ys2krlyhygdv9gudk4iffr",
+  "fields": {
+    "session_data": ".eJxVjUsOwjAMBe-SNY3axLEdluw5Q5U4hhZQK_WzQtydVuoC1m9m3tu0aV26dp11avtizuamIlDqXKFkqgCzVNwQVVo4Os-xwYjm9KvlJE8ddrc80nAfrYzDMvXZ7og91tlex6Kvy8H-Bbo0d5sdCyoJ1cBFGBwkJUIMvmy3hJlcAKy9ovMSA3Mgx1nBKycF10Q2ny_rOT_a:1vOqZi:qdM17gmVnNnHjmrAH-lafWFXjnc5qnWLP7MaGDNstak",
+    "expire_date": "2025-12-12T04:59:18.326Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zrqa7zoefblh1nx8lacbhvdv4gtg1102",
+  "fields": {
+    "session_data": ".eJxVzMsOwiAQheF3YS2EchkYl-59hgaGwVZNSXpZGd9dm3Sh6_N_5yX6tK1Dvy0892MRZ1GZyBWdJVAO0kEmGbsQJJeIxkbsAEGcfllO9OBpt-WepltT1KZ1HrPaE3Wsi7q2ws_L0f4dDGkZvhqrT44doA7FZO8N-IiI1lQHnGqwBNhpT5mCt9YQusQejS6RHZqI4v0B8tlAOQ:1vN73R:p5OxD4tcnww6aBhJHOrmXcvSTt33H2s5Pro3QUC_D3A",
+    "expire_date": "2025-12-07T10:10:49.865Z"
   }
 },
 {
   "model": "myapp.customer",
-  "pk": "152a9158-8a3a-40c1-9c52-45261b242409",
+  "pk": "21ca51ad-ccc3-4266-864f-cc8c2fdd077b",
+  "fields": {
+    "customer_name": "mahi",
+    "customer_class": "10",
+    "customer_email": "abc@gmail.com",
+    "customer_mobile": 8081482053,
+    "customer_goal": "NEET",
+    "customer_course": "NEET",
+    "customer_message": "jisdhf",
+    "customer_timestamp": "2025-11-16T10:58:09.723Z"
+  }
+},
+{
+  "model": "myapp.customer",
+  "pk": "537a1bc4-2659-4fe6-9ce1-95d9ab2bc446",
   "fields": {
     "customer_name": "mahendra",
     "customer_class": "12th",
-    "customer_email": "abddc@gmail.com",
-    "customer_mobile": 8081482053,
-    "customer_goal": "iit jee",
-    "customer_course": "JEE",
-    "customer_message": "abcd",
-    "customer_timestamp": "2025-09-21T02:51:30.887Z"
-  }
-},
-{
-  "model": "myapp.customer",
-  "pk": "2f4b724d-e65f-4e33-a9d5-9664f4956dd7",
-  "fields": {
-    "customer_name": "ankur",
-    "customer_class": "10",
-    "customer_email": "abddc@gmail.com",
-    "customer_mobile": 8081482053,
-    "customer_goal": "iit jee",
-    "customer_course": "neet",
-    "customer_message": "hello",
-    "customer_timestamp": "2025-09-13T12:50:35.226Z"
-  }
-},
-{
-  "model": "myapp.customer",
-  "pk": "8db5d2c4-0951-4276-91c4-448a30fb145e",
-  "fields": {
-    "customer_name": "testing_project",
-    "customer_class": "10",
     "customer_email": "abc@gmail.com",
     "customer_mobile": 8081482053,
     "customer_goal": "iit jee",
     "customer_course": "JEE",
-    "customer_message": "testing with django_project",
-    "customer_timestamp": "2025-09-27T12:20:46.019Z"
+    "customer_message": "kjnsdhosah",
+    "customer_timestamp": "2025-11-16T10:49:42.240Z"
   }
 },
 {
   "model": "myapp.customer",
-  "pk": "9e1602e8-ea19-4e38-92bf-774b76b54633",
+  "pk": "8ffba158-1175-44c8-b434-d2dc6d3e39cc",
+  "fields": {
+    "customer_name": "Jai",
+    "customer_class": "10",
+    "customer_email": "abc@gmail.com",
+    "customer_mobile": 8081482053,
+    "customer_goal": "NEET",
+    "customer_course": "NEET course",
+    "customer_message": "checking",
+    "customer_timestamp": "2025-11-16T11:21:32.417Z"
+  }
+},
+{
+  "model": "myapp.customer",
+  "pk": "c48cc071-da4a-465d-b0f6-c44813c81bb3",
+  "fields": {
+    "customer_name": "mahi",
+    "customer_class": "10",
+    "customer_email": "abc@gmail.com",
+    "customer_mobile": 8081482053,
+    "customer_goal": "iit",
+    "customer_course": "iit",
+    "customer_message": "kjnh",
+    "customer_timestamp": "2025-11-16T11:43:11.127Z"
+  }
+},
+{
+  "model": "myapp.customer",
+  "pk": "d3a2c4bc-3918-40f2-82b6-000f1f06eec2",
   "fields": {
     "customer_name": "mahendra",
-    "customer_class": "10",
-    "customer_email": "abc@gmail.com",
-    "customer_mobile": 8081482053,
-    "customer_goal": "iit jee",
-    "customer_course": "JEE",
-    "customer_message": "hello.",
-    "customer_timestamp": "2025-09-15T16:11:32.060Z"
-  }
-},
-{
-  "model": "myapp.customer",
-  "pk": "ae591481-9251-4cdb-9c7c-8a2ac66493b5",
-  "fields": {
-    "customer_name": "mahendra",
-    "customer_class": "10",
-    "customer_email": "abc@gmail.com",
-    "customer_mobile": 8081482053,
-    "customer_goal": "iit jee",
-    "customer_course": "online submission",
-    "customer_message": "i want it very early",
-    "customer_timestamp": "2025-09-13T12:05:58Z"
-  }
-},
-{
-  "model": "myapp.customer",
-  "pk": "b7ff523f-f2c9-40a9-a190-4cd2e2313384",
-  "fields": {
-    "customer_name": "ankur",
     "customer_class": "12th",
     "customer_email": "abc@gmail.com",
     "customer_mobile": 8081482053,
-    "customer_goal": "neet",
-    "customer_course": "Neet crash course",
-    "customer_message": "i want it very early",
-    "customer_timestamp": "2025-09-18T17:21:12Z"
+    "customer_goal": "iit jee",
+    "customer_course": "JEE",
+    "customer_message": "kjhahdfoauh",
+    "customer_timestamp": "2025-11-18T16:09:25.419Z"
   }
 },
 {
-  "model": "myapp.category",
-  "pk": "706afc21-bda6-46e4-9a01-f99b6ebda519",
+  "model": "myapp.customer",
+  "pk": "e710d662-fb2f-4c51-b1f2-da8472142515",
   "fields": {
-    "name": "IIT-JEE",
-    "slug": "iit-jee",
-    "created_at": "2025-09-18T18:28:07.286Z"
+    "customer_name": "abc",
+    "customer_class": "11",
+    "customer_email": "abc@gmail.com",
+    "customer_mobile": 2342343,
+    "customer_goal": "ssaf",
+    "customer_course": "asdf",
+    "customer_message": "dsfas",
+    "customer_timestamp": "2025-11-23T09:58:28.885Z"
   }
 },
 {
   "model": "myapp.category",
-  "pk": "83a34d61-4b71-4424-9dde-62b72db6044a",
-  "fields": {
-    "name": "CBSE",
-    "slug": "cbse",
-    "created_at": "2025-09-18T18:32:30.206Z"
-  }
-},
-{
-  "model": "myapp.category",
-  "pk": "884fa640-54b7-411b-887f-6d3f86da9cb7",
+  "pk": "3080a43e-d6f9-4ffa-a785-626e7bb137ca",
   "fields": {
     "name": "NEET",
     "slug": "neet",
-    "created_at": "2025-09-18T18:28:24.384Z"
+    "created_at": "2025-10-28T13:15:38.086Z"
   }
 },
 {
   "model": "myapp.category",
-  "pk": "da56ad88-4263-41cd-b231-cf1983840af8",
+  "pk": "5d5fc1e3-1ac2-43ae-8e18-5304bbe6a1d4",
   "fields": {
-    "name": "Olympiad",
+    "name": "CBSE",
+    "slug": "cbse",
+    "created_at": "2025-11-04T01:56:54.439Z"
+  }
+},
+{
+  "model": "myapp.category",
+  "pk": "739fb98a-dbfd-4bc1-9a50-6dec3b581ce1",
+  "fields": {
+    "name": "OLYMPIAD",
     "slug": "olympiad",
-    "created_at": "2025-09-18T18:28:53.210Z"
+    "created_at": "2025-10-28T13:21:01.692Z"
+  }
+},
+{
+  "model": "myapp.category",
+  "pk": "79756c07-90aa-4170-99d7-b1e5d57c0296",
+  "fields": {
+    "name": "FOUNDATION",
+    "slug": "foundation",
+    "created_at": "2025-11-04T13:13:50.725Z"
+  }
+},
+{
+  "model": "myapp.category",
+  "pk": "9ef94cb0-be58-4024-95ff-f6abe2bbd590",
+  "fields": {
+    "name": "IIT-JEE",
+    "slug": "iit-jee",
+    "created_at": "2025-10-28T12:51:26.829Z"
   }
 },
 {
   "model": "myapp.course",
-  "pk": "198d5fec-7e33-4eaa-9897-972029c61bc8",
+  "pk": "083e9bb7-7018-4331-a41f-0d3674604d0f",
   "fields": {
-    "title": "NEET REPEATER PRPOGRAM",
-    "description": "OFFLINE REPEATERS PROGRAM",
-    "category": "884fa640-54b7-411b-887f-6d3f86da9cb7",
+    "title": "Olympiad Coaching",
+    "description": "To Qualify Olympiad",
+    "category": "739fb98a-dbfd-4bc1-9a50-6dec3b581ce1",
     "duration": "150",
-    "teacher": "Dr. Rajendra",
-    "image": "courses/Concept_crafter_r14QSQZ.jpeg",
-    "created_at": "2025-09-21T11:42:32.160Z"
+    "teacher": "Dr. VISHNOI",
+    "image": "courses/Concept_crafter_LybFWVO.jpeg",
+    "created_at": "2025-10-28T13:22:55.065Z"
   }
 },
 {
   "model": "myapp.course",
-  "pk": "2e1c9ea9-a773-458d-801e-1cc7dec6c757",
+  "pk": "15c4ec51-5874-499d-a07f-586e2962c4ea",
   "fields": {
-    "title": "Plus Two Tuition WITH NEET COACHING",
+    "title": "Class 12 with NEET Coaching",
     "description": "Best NEET Coaching",
-    "category": "884fa640-54b7-411b-887f-6d3f86da9cb7",
+    "category": "3080a43e-d6f9-4ffa-a785-626e7bb137ca",
+    "duration": "220",
+    "teacher": "Dr. Rajendra",
+    "image": "courses/Doct2.jpg",
+    "created_at": "2025-10-29T15:49:26.706Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "1e759781-b03c-486c-a065-5c3ef0da7b37",
+  "fields": {
+    "title": "Class 12 with JEE Coaching",
+    "description": "You are next IITIAN",
+    "category": "9ef94cb0-be58-4024-95ff-f6abe2bbd590",
+    "duration": "220",
+    "teacher": "Dr. Shiva",
+    "image": "courses/JEE_img.jpeg",
+    "created_at": "2025-10-30T13:31:37.530Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "2489ce11-1fbf-4eda-9db8-8f5ea413a44c",
+  "fields": {
+    "title": "Class 11 All Subjects",
+    "description": "Build the base for your dream career",
+    "category": "5d5fc1e3-1ac2-43ae-8e18-5304bbe6a1d4",
+    "duration": "150",
+    "teacher": "Vishal Sir",
+    "image": "courses/o5.png",
+    "created_at": "2025-11-04T02:02:54.592Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "43f04be3-247c-4278-9b31-802fd0d650cf",
+  "fields": {
+    "title": "Two Year Program(Class 9-10)",
+    "description": "Best foundation course",
+    "category": "79756c07-90aa-4170-99d7-b1e5d57c0296",
     "duration": "150",
     "teacher": "Akshay Sir",
-    "image": "courses/Concept_crafter.jpeg",
-    "created_at": "2025-09-21T10:39:06.955Z"
+    "image": "courses/class9.avif",
+    "created_at": "2025-11-04T13:22:59.938Z"
   }
 },
 {
   "model": "myapp.course",
-  "pk": "50e21698-c8c7-49e6-8ecc-e4bada8c2663",
+  "pk": "4cbe10be-66be-42cb-940d-a4f9cd593077",
   "fields": {
-    "title": "JEE ADVANCE PROGRAM",
-    "description": "JEE ADVANCE SPECIAL PROGRAM TO BOOST YOUR SCORE",
-    "category": "706afc21-bda6-46e4-9a01-f99b6ebda519",
+    "title": "Maths Olympiad Course",
+    "description": "Best Olympiad Course",
+    "category": "739fb98a-dbfd-4bc1-9a50-6dec3b581ce1",
+    "duration": "220",
+    "teacher": "AKSHAY SIR",
+    "image": "courses/olympiad.jfif",
+    "created_at": "2025-11-03T13:46:20.279Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "6eae8ee6-a265-44d4-a655-2a13100d9069",
+  "fields": {
+    "title": "NEET Repeaters CourseS",
+    "description": "Repeat. Rise. Conquer.",
+    "category": "3080a43e-d6f9-4ffa-a785-626e7bb137ca",
+    "duration": "220",
+    "teacher": "VISHAL SIR",
+    "image": "courses/NEET_img.jpeg",
+    "created_at": "2025-11-03T13:43:11.939Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "7682b3b4-602e-4a2e-8bda-f0da20d2fd67",
+  "fields": {
+    "title": "Class 12 All Subjects",
+    "description": "LetÆs crack your dream exam together.",
+    "category": "5d5fc1e3-1ac2-43ae-8e18-5304bbe6a1d4",
+    "duration": "150",
+    "teacher": "Akshay Sir",
+    "image": "courses/o4.png",
+    "created_at": "2025-11-04T02:03:39.129Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "7bf63995-29f4-492e-9085-112ff05b735a",
+  "fields": {
+    "title": "JEE Repeaters Course",
+    "description": "Repeat. Rise. Conquer.",
+    "category": "9ef94cb0-be58-4024-95ff-f6abe2bbd590",
+    "duration": "220",
+    "teacher": "Dr. Rajendra",
+    "image": "courses/JEE_img_mvXvwqy.jpeg",
+    "created_at": "2025-10-30T13:34:59.467Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "7e214df9-cd1f-4d1f-b452-c72f7d5d1db2",
+  "fields": {
+    "title": "Class 9 All Subjects",
+    "description": "Start early, stay ahead",
+    "category": "5d5fc1e3-1ac2-43ae-8e18-5304bbe6a1d4",
+    "duration": "150",
+    "teacher": "Vishal Sir",
+    "image": "courses/img3_7XCulgT.webp",
+    "created_at": "2025-11-04T01:58:13.404Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "c522230a-f5c8-485c-aab8-62d5b8862011",
+  "fields": {
+    "title": "Three Year Program(Class 8 to 10)",
+    "description": "Best foundation course",
+    "category": "79756c07-90aa-4170-99d7-b1e5d57c0296",
+    "duration": "150",
+    "teacher": "Vishal Sir",
+    "image": "courses/class10.avif",
+    "created_at": "2025-11-04T13:24:00.235Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "d51c2f84-821a-40bb-9cda-4a8024810d75",
+  "fields": {
+    "title": "One Year Program(Class 10)",
+    "description": "Best foundation course",
+    "category": "79756c07-90aa-4170-99d7-b1e5d57c0296",
+    "duration": "150",
+    "teacher": "Vishal Sir",
+    "image": "courses/class8.avif",
+    "created_at": "2025-11-04T13:20:30.362Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "e0da94f1-6dfc-43b9-8eec-3720780ed1a4",
+  "fields": {
+    "title": "Class 11 with NEET Coaching",
+    "description": "Best NEET Coaching",
+    "category": "3080a43e-d6f9-4ffa-a785-626e7bb137ca",
+    "duration": "150",
+    "teacher": "Dr. KUSHAL",
+    "image": "courses/Concept_crafter_kEUqauc.jpeg",
+    "created_at": "2025-10-28T13:16:39.645Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "e94c5f66-8cf1-4deb-9b71-226ada0b47be",
+  "fields": {
+    "title": "Class 10 All Subjects",
+    "description": "Make boards easy and stress-free.",
+    "category": "5d5fc1e3-1ac2-43ae-8e18-5304bbe6a1d4",
+    "duration": "150",
+    "teacher": "Akshay Sir",
+    "image": "courses/o6_uUFvKBx.png",
+    "created_at": "2025-11-04T02:02:00.771Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "efd4fd47-c8d0-4b3e-9e51-5426da3a87fa",
+  "fields": {
+    "title": "Science Olympiad Course",
+    "description": "Best Olympiad Course",
+    "category": "739fb98a-dbfd-4bc1-9a50-6dec3b581ce1",
+    "duration": "220",
+    "teacher": "VISHAL SIR",
+    "image": "courses/img3.webp",
+    "created_at": "2025-11-03T13:47:10.597Z"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": "f117f16d-4a62-45e6-be5a-ce856caf8c74",
+  "fields": {
+    "title": "Class 11 with JEE Coaching",
+    "description": "Be the next IITIAN",
+    "category": "9ef94cb0-be58-4024-95ff-f6abe2bbd590",
     "duration": "250",
     "teacher": "Dr. VISHNOI",
-    "image": "courses/Concept_crafter_GuRIYfH.jpeg",
-    "created_at": "2025-09-25T16:38:06.219Z"
-  }
-},
-{
-  "model": "myapp.course",
-  "pk": "562bdd53-aa22-4258-8d25-b2b9591b3845",
-  "fields": {
-    "title": "Olympiad",
-    "description": "one of the best course",
-    "category": "da56ad88-4263-41cd-b231-cf1983840af8",
-    "duration": "100",
-    "teacher": "ABC",
-    "image": "courses/Concept_crafter_e4lp3sm.jpeg",
-    "created_at": "2025-09-25T16:01:09.619Z"
-  }
-},
-{
-  "model": "myapp.course",
-  "pk": "7bb976e2-5b97-4b78-8b19-66ed1c8f4672",
-  "fields": {
-    "title": "JEE OFFLINE RE-REPEATER PROGRAM",
-    "description": "JOIN CCA RE-REPEATER'S JEE PROGRAM",
-    "category": "706afc21-bda6-46e4-9a01-f99b6ebda519",
-    "duration": "150",
-    "teacher": "Dr. KUSHAL",
-    "image": "courses/Concept_crafter_6boKeWK.jpeg",
-    "created_at": "2025-09-25T16:35:52.914Z"
-  }
-},
-{
-  "model": "myapp.course",
-  "pk": "9607079c-54f0-4a27-ba60-7e1830a9e9f7",
-  "fields": {
-    "title": "JEE OFFLINE REPEATER PROGRAM",
-    "description": "JOIN CCA REPEATER F[PROGRAM FOR BOOST YOUR SCORE",
-    "category": "706afc21-bda6-46e4-9a01-f99b6ebda519",
-    "duration": "150",
-    "teacher": "Dr. KUSHAL",
-    "image": "courses/Concept_crafter_StsmniF.jpeg",
-    "created_at": "2025-09-25T16:34:29.116Z"
-  }
-},
-{
-  "model": "myapp.course",
-  "pk": "b2a5f1fe-3161-491d-8b00-3053db45e12d",
-  "fields": {
-    "title": "NEET RE-REPEATER PRPOGRAM",
-    "description": "OFFLINE RE-REPEATER PROGRAM",
-    "category": "884fa640-54b7-411b-887f-6d3f86da9cb7",
-    "duration": "120",
-    "teacher": "XYZ",
-    "image": "courses/Concept_crafter_xR9fGax.jpeg",
-    "created_at": "2025-09-24T14:19:48.196Z"
-  }
-},
-{
-  "model": "myapp.course",
-  "pk": "c5cbc0d6-ded5-49b5-9b6f-9d7333134556",
-  "fields": {
-    "title": "Plus One Tuition WITH NEET COACHING",
-    "description": "Offline Coaching for you",
-    "category": "884fa640-54b7-411b-887f-6d3f86da9cb7",
-    "duration": "220",
-    "teacher": "Vishal Sir",
-    "image": "courses/Concept_crafter_u4YNAkq.jpeg",
-    "created_at": "2025-09-19T18:11:36.509Z"
-  }
-},
-{
-  "model": "myapp.course",
-  "pk": "d125da63-d669-493c-bca4-e0b9742b5668",
-  "fields": {
-    "title": "CLASS 11 TUITION WITH JEE COACHING",
-    "description": "JOIN CCA FOR EXPERT CLASS 11 TUITION TAILORED FOR JEE ASPIRANTS",
-    "category": "706afc21-bda6-46e4-9a01-f99b6ebda519",
-    "duration": "150",
-    "teacher": "Dr. KMV",
-    "image": "courses/Concept_crafter_G4xSc8o.jpeg",
-    "created_at": "2025-09-25T16:31:58.103Z"
-  }
-},
-{
-  "model": "myapp.course",
-  "pk": "dba3b98c-b9ce-46e1-bea7-1e2394efc1ac",
-  "fields": {
-    "title": "CBSE COURSES",
-    "description": "BEST CBSE COURSES FOR YOU",
-    "category": "83a34d61-4b71-4424-9dde-62b72db6044a",
-    "duration": "100",
-    "teacher": "ABC",
-    "image": "courses/Concept_crafter_UEvidGx.jpeg",
-    "created_at": "2025-09-25T16:11:58.582Z"
-  }
-},
-{
-  "model": "myapp.course",
-  "pk": "dcfc9125-30c3-4eca-b62e-00b21e494c38",
-  "fields": {
-    "title": "CLASS 12 TUITION WITH JEE COACHING",
-    "description": "JOIN CCA FOR EXPERT CLASS 12 TUITION TAILORED FOR JEE ASPIRANTS",
-    "category": "706afc21-bda6-46e4-9a01-f99b6ebda519",
-    "duration": "150",
-    "teacher": "Dr. MMR",
-    "image": "courses/Concept_crafter_aeht52d.jpeg",
-    "created_at": "2025-09-25T16:32:33.142Z"
+    "image": "courses/Concept_crafter_ZoXTaDx.jpeg",
+    "created_at": "2025-10-28T12:56:50.866Z"
   }
 },
 {
   "model": "myapp.downloadcategory",
-  "pk": "346851eb-19e6-4fd7-bf5e-6ad243504375",
-  "fields": {
-    "name": "JEE MAINS",
-    "slug": "jee_mians",
-    "syllabus_url": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2024/10/2024102841.pdf",
-    "created_at": "2025-09-29T12:59:09.076Z"
-  }
-},
-{
-  "model": "myapp.downloadcategory",
-  "pk": "5884797d-3dff-4608-8086-ffdd600038ec",
+  "pk": "5828751e-333a-4180-bc3e-df2cd17366cf",
   "fields": {
     "name": "Class 11 with JEE Coaching",
-    "slug": "class_11_jee",
-    "syllabus_url": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2024/10/2024102841.pdf",
-    "created_at": "2025-09-29T13:05:53.408Z"
-  }
-},
-{
-  "model": "myapp.downloadcategory",
-  "pk": "9acc34f7-1186-4ef1-b0c5-ec896b310359",
-  "fields": {
-    "name": "CLASS 11 NEET",
-    "slug": "class_11_neet",
+    "slug": "iit-jee",
     "syllabus_url": "https://www.nta.ac.in/Download/Notice/Notice_20241230193629.pdf",
-    "created_at": "2025-09-30T17:36:49.247Z"
+    "created_at": "2025-10-12T13:51:09.393Z"
   }
 },
 {
   "model": "myapp.downloaddocument",
-  "pk": "0e3cb5aa-6db6-4c65-bd51-8129295d19aa",
+  "pk": "71321655-3e80-468a-bfa1-3716357ddb5f",
   "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
-    "title": "Motion in Two Dimensions",
-    "doc_type": "chapter",
-    "subject": "physics",
-    "order": 0,
-    "file": "downloads/4_96t0skN._Motion_in_Two_Dimensions.pdf",
-    "uploaded_at": "2025-10-01T13:51:31.713Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "3dc25356-cf30-4ae1-b092-db2bd1d1d2cf",
-  "fields": {
-    "category": "9acc34f7-1186-4ef1-b0c5-ec896b310359",
-    "title": "Analysis NEET 2018-25",
-    "doc_type": "bonus",
-    "subject": "other",
-    "order": 0,
-    "file": "downloads/PYQ_Analyis_of_JEE__NEET_2.pdf",
-    "uploaded_at": "2025-09-30T17:37:57.909Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "40b739b9-0227-4aa6-bf80-3a93b60d6f99",
-  "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
-    "title": "COM Momentum & Collision",
-    "doc_type": "chapter",
-    "subject": "physics",
-    "order": 0,
-    "file": "downloads/7._Center_of_Mass_Momentum_and_Collision.pdf",
-    "uploaded_at": "2025-10-01T13:53:28.535Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "4a5dd695-8924-445a-8ec0-8a787c6bc5b4",
-  "fields": {
-    "category": "346851eb-19e6-4fd7-bf5e-6ad243504375",
-    "title": "JEE-MAINS Syllabus",
-    "doc_type": "other",
-    "subject": "other",
-    "order": 1,
-    "file": "downloads/4._Motion_in_Two_Dimensions.pdf",
-    "uploaded_at": "2025-09-29T13:01:12.885Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "5a0ec3bb-d749-42ad-b99f-f796fb407f9e",
-  "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
-    "title": "3. Motion In One Dimension",
-    "doc_type": "chapter",
-    "subject": "physics",
-    "order": 0,
-    "file": "downloads/3._Motion_In_One_Dimension.pdf",
-    "uploaded_at": "2025-10-01T13:50:37.657Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "8767b8ab-11b9-4968-b588-a91bcbbb15f3",
-  "fields": {
-    "category": "346851eb-19e6-4fd7-bf5e-6ad243504375",
-    "title": "Kinetic Theory of Gases",
-    "doc_type": "chapter",
-    "subject": "physics",
-    "order": 0,
-    "file": "downloads/16_kFmcwPt._Kinetic_Theory_of_Gases.pdf",
-    "uploaded_at": "2025-09-30T17:20:48.212Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "8ca25eb2-7b17-4c6d-b4e5-43a1befe8bbb",
-  "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
-    "title": "Mathematics in Physics",
-    "doc_type": "chapter",
-    "subject": "physics",
-    "order": 0,
-    "file": "downloads/1._Mathematics_in_Physics.pdf",
-    "uploaded_at": "2025-09-30T17:57:47.006Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "9f2fd72e-77fd-40bb-9c90-f851fbdb7ce2",
-  "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
-    "title": "Work Power Energy",
-    "doc_type": "chapter",
-    "subject": "physics",
-    "order": 0,
-    "file": "downloads/6._Work_Power_Energy.pdf",
-    "uploaded_at": "2025-10-01T13:52:36.360Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "a123faab-2a18-498d-ae03-40c3cd761321",
-  "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
-    "title": "Rotational Motion",
-    "doc_type": "chapter",
-    "subject": "physics",
-    "order": 0,
-    "file": "downloads/8._Rotational_Motion.pdf",
-    "uploaded_at": "2025-10-01T13:53:58.076Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "b16e4a72-9618-4e5a-9200-0fa4ac2f9bfb",
-  "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
-    "title": "Mechanical Properties of Solids",
-    "doc_type": "chapter",
-    "subject": "physics",
-    "order": 0,
-    "file": "downloads/10._Mechanical_Properties_of_Solids.pdf",
-    "uploaded_at": "2025-10-01T13:55:14.487Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "b5601022-1b02-4a29-9f7d-2a5e6eb62a12",
-  "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
-    "title": "Your Class 11 Syllabus",
-    "doc_type": "chapter",
-    "subject": "physics",
-    "order": 2,
-    "file": "downloads/16._Kinetic_Theory_of_Gases.pdf",
-    "uploaded_at": "2025-09-29T13:08:56.252Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "bf9e0bd0-30f2-4103-88a7-125375106418",
-  "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
-    "title": "Gravitation",
-    "doc_type": "chapter",
-    "subject": "physics",
-    "order": 0,
-    "file": "downloads/9._Gravitation.pdf",
-    "uploaded_at": "2025-10-01T13:54:44.483Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "c1ccbc9f-6fcb-4524-98ed-9e3a655f78be",
-  "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
-    "title": "Class 11 Syllabus",
-    "doc_type": "chapter",
-    "subject": "physics",
-    "order": 2,
-    "file": "downloads/4_tNSruCN._Motion_in_Two_Dimensions.pdf",
-    "uploaded_at": "2025-09-29T16:00:43.201Z"
-  }
-},
-{
-  "model": "myapp.downloaddocument",
-  "pk": "d69a79cb-3ace-4228-872e-cc3dfc1d1dda",
-  "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
+    "category": "5828751e-333a-4180-bc3e-df2cd17366cf",
     "title": "Units and Dimensions",
     "doc_type": "chapter",
     "subject": "physics",
     "order": 0,
-    "file": "downloads/2._Units_and_Dimensions.pdf",
-    "uploaded_at": "2025-10-01T13:49:59.699Z"
+    "file": "downloads/2_HCtcYp9._Units_and_Dimensions.pdf",
+    "uploaded_at": "2025-10-12T13:55:20.270Z"
   }
 },
 {
   "model": "myapp.downloaddocument",
-  "pk": "e5d67af2-b25b-44f9-8785-f5310e80a262",
+  "pk": "aa1afcf9-a15f-41cf-8512-95ec7aba8793",
   "fields": {
-    "category": "5884797d-3dff-4608-8086-ffdd600038ec",
-    "title": "Laws of Motion",
+    "category": "5828751e-333a-4180-bc3e-df2cd17366cf",
+    "title": "Mathematics",
+    "doc_type": "chapter",
+    "subject": "maths",
+    "order": 0,
+    "file": "downloads/jee-advanced-syllabus-2025-pdf-download.pdf",
+    "uploaded_at": "2025-10-18T08:16:16.064Z"
+  }
+},
+{
+  "model": "myapp.downloaddocument",
+  "pk": "b0d836fe-89d4-4a2b-a495-3bbe4e0071de",
+  "fields": {
+    "category": "5828751e-333a-4180-bc3e-df2cd17366cf",
+    "title": "Mathematics in Physics",
     "doc_type": "chapter",
     "subject": "physics",
     "order": 0,
-    "file": "downloads/5._Laws_of_Motion.pdf",
-    "uploaded_at": "2025-10-01T13:52:09.694Z"
+    "file": "downloads/1_JmX9A5h._Mathematics_in_Physics.pdf",
+    "uploaded_at": "2025-10-12T13:52:36.857Z"
+  }
+},
+{
+  "model": "myapp.student",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$A2ZdYGmRRFGmmy1HRyS2tP$1sUwzsKEmS4N4zHlU3z13EuIv/s2PbgsWDx0I2i3cOA=",
+    "last_login": null,
+    "is_superuser": false,
+    "mobile_number": null,
+    "full_name": "Mahendra Yadav",
+    "email": "mahendracse8081@gmail.com",
+    "target_course": null,
+    "student_class": null,
+    "is_active": true,
+    "is_staff": false,
+    "created_at": "2025-10-07T18:31:24.348Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "myapp.student",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$oEcm7p5iKamv0HFXS8TXa8$IaTYkz2DK+L1IdesBYsGcA3vku+omvn0I3w0CK5goHA=",
+    "last_login": "2025-11-28T04:59:18.290Z",
+    "is_superuser": true,
+    "mobile_number": "8081482053",
+    "full_name": "Mahendra Yadav",
+    "email": "mahendrayadav@ghcl.co.in",
+    "target_course": "IIT",
+    "student_class": "10",
+    "is_active": true,
+    "is_staff": true,
+    "created_at": "2025-11-05T09:37:37.713Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "224cf796-eeee-4800-a233-fc3a31f48d09",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "119553",
+    "session_id": null,
+    "created_at": "2025-11-05T09:40:39.646Z",
+    "verified": true,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "24efca19-c118-4bd1-8dc2-575eb4149e2f",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "804603",
+    "session_id": null,
+    "created_at": "2025-11-18T15:59:23.397Z",
+    "verified": true,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "31fd5c39-88ee-493f-ac8c-16cbc1c02be5",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "342895",
+    "session_id": null,
+    "created_at": "2025-11-23T10:14:53.804Z",
+    "verified": false,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "3b86809f-98c7-46ba-9c54-f1c24876155a",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "103844",
+    "session_id": null,
+    "created_at": "2025-10-29T15:55:28.146Z",
+    "verified": false,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "400733f8-7688-4ded-9a91-5792ddf3886a",
+  "fields": {
+    "mobile_number": "7041330731",
+    "code": "841472",
+    "session_id": null,
+    "created_at": "2025-10-27T13:22:56.106Z",
+    "verified": false,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "59855f44-98d2-4579-8f94-137249f1c609",
+  "fields": {
+    "mobile_number": "7041330731",
+    "code": null,
+    "session_id": "9f8689a2-8e12-4d7c-982e-625ba1174348",
+    "created_at": "2025-11-27T10:36:54.641Z",
+    "verified": false,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "72b07c66-a3e8-4e61-afa8-dc2109c7e191",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "186486",
+    "session_id": null,
+    "created_at": "2025-11-23T10:11:51.797Z",
+    "verified": true,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "7dd0989a-1000-4ba6-8ea4-6de4e862389b",
+  "fields": {
+    "mobile_number": "9999999999",
+    "code": "501801",
+    "session_id": null,
+    "created_at": "2025-10-27T12:42:51.255Z",
+    "verified": false,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "890763d9-802e-426c-9fc7-51564fe2df61",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "758867",
+    "session_id": null,
+    "created_at": "2025-10-27T12:46:04.760Z",
+    "verified": true,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "94ed0e07-0341-47e8-897b-8e7006a90c2a",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "389871",
+    "session_id": null,
+    "created_at": "2025-11-05T09:39:04.656Z",
+    "verified": false,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "97f8ea72-57fa-4059-ba4e-483e6a645f20",
+  "fields": {
+    "mobile_number": "7041330731",
+    "code": "926944",
+    "session_id": null,
+    "created_at": "2025-10-27T12:49:30.211Z",
+    "verified": true,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "993d2bae-02c6-42da-a1ea-5717fd8f5fc2",
+  "fields": {
+    "mobile_number": "7041330731",
+    "code": "875536",
+    "session_id": null,
+    "created_at": "2025-11-23T10:10:05.823Z",
+    "verified": false,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "a26e26b5-e04f-46a6-bf55-a28a713f7663",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": null,
+    "session_id": "86dcf6fc-302d-4984-b8ba-7704e8c677e5",
+    "created_at": "2025-11-27T10:28:16.594Z",
+    "verified": true,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "a2c00d4f-c2da-4bd4-be68-8651abddf22a",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "357577",
+    "session_id": null,
+    "created_at": "2025-11-18T16:04:20.892Z",
+    "verified": false,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "a336fa6d-1ae5-4953-89ff-99a86bf21b42",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "979579",
+    "session_id": null,
+    "created_at": "2025-10-27T13:05:49.769Z",
+    "verified": false,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "a8db3c7b-8740-4c03-bf31-28b80ea576d8",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "300459",
+    "session_id": null,
+    "created_at": "2025-11-05T09:31:17.343Z",
+    "verified": false,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "b3109d42-b645-48e7-9ca5-071eea633219",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": null,
+    "session_id": "d9850725-3f2f-47f2-baca-e480fc491b1d",
+    "created_at": "2025-11-27T10:09:26.264Z",
+    "verified": true,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "b8085f13-079b-4300-aa50-70252eae7a3c",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "630743",
+    "session_id": null,
+    "created_at": "2025-10-29T15:53:17.365Z",
+    "verified": true,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "ba093840-b9ea-4bed-8274-e33e8e945c9e",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "449748",
+    "session_id": null,
+    "created_at": "2025-11-04T13:48:51.496Z",
+    "verified": true,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "bb3ad63c-cb1d-4f7d-a47f-fca8c27b0ecd",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "268198",
+    "session_id": null,
+    "created_at": "2025-10-27T13:21:30.089Z",
+    "verified": false,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "be88df43-842e-4e20-9149-8c07e8c779bf",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "960565",
+    "session_id": null,
+    "created_at": "2025-11-04T13:49:39.759Z",
+    "verified": false,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "c3da995c-78d8-4fb1-b7c7-0b96c00256c2",
+  "fields": {
+    "mobile_number": "7041330731",
+    "code": "196922",
+    "session_id": null,
+    "created_at": "2025-11-26T13:15:23.320Z",
+    "verified": false,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "cb6af59a-df93-4825-b51a-1323ad151b7b",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "708368",
+    "session_id": null,
+    "created_at": "2025-10-27T12:48:29.267Z",
+    "verified": false,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "dcd07495-de12-4ad9-ad28-d646beb479cf",
+  "fields": {
+    "mobile_number": "7984476146",
+    "code": null,
+    "session_id": "761e75d4-aede-4ac2-a880-90d336c011a1",
+    "created_at": "2025-11-27T10:39:21.003Z",
+    "verified": false,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "e772c7ca-b682-42f9-bf3d-36dc1114d202",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "868743",
+    "session_id": null,
+    "created_at": "2025-10-27T13:25:25.840Z",
+    "verified": true,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "f03fa3af-3657-439c-9d60-ea79d029b0ed",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "367425",
+    "session_id": null,
+    "created_at": "2025-11-05T09:42:03.805Z",
+    "verified": false,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "f76f8037-918e-444a-9d73-0450549f9a26",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "916254",
+    "session_id": null,
+    "created_at": "2025-11-23T10:12:43.273Z",
+    "verified": false,
+    "used": true
+  }
+}
+]
+-42f9-bf3d-36dc1114d202",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "868743",
+    "session_id": null,
+    "created_at": "2025-10-27T13:25:25.840Z",
+    "verified": true,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "f03fa3af-3657-439c-9d60-ea79d029b0ed",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "367425",
+    "session_id": null,
+    "created_at": "2025-11-05T09:42:03.805Z",
+    "verified": false,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "f76f8037-918e-444a-9d73-0450549f9a26",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "916254",
+    "session_id": null,
+    "created_at": "2025-11-23T10:12:43.273Z",
+    "verified": false,
+    "used": true
+  }
+}
+]
+-42f9-bf3d-36dc1114d202",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "868743",
+    "session_id": null,
+    "created_at": "2025-10-27T13:25:25.840Z",
+    "verified": true,
+    "used": false
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "f03fa3af-3657-439c-9d60-ea79d029b0ed",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "367425",
+    "session_id": null,
+    "created_at": "2025-11-05T09:42:03.805Z",
+    "verified": false,
+    "used": true
+  }
+},
+{
+  "model": "myapp.otprequest",
+  "pk": "f76f8037-918e-444a-9d73-0450549f9a26",
+  "fields": {
+    "mobile_number": "8081482053",
+    "code": "916254",
+    "session_id": null,
+    "created_at": "2025-11-23T10:12:43.273Z",
+    "verified": false,
+    "used": true
   }
 }
 ]
